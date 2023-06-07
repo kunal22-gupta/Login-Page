@@ -76,18 +76,19 @@ header{
 .navigation .btn-login {
     width: 130px;
     height: 50px;
-    background-color: transparent;
+    background-color: var(--blue);
     color: #fff;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.1em;
-    border: 2px solid #fff;
     border-radius: 5px;
+    border: 2px solid white;
     outline: none;
     margin-left: 50px;
     transition: 0.5s;
 }
 
 .navigation .btn-login:hover {
+    border: 2px solid var(--blue);
     background-color: #fff;
     color: var(--blue);
    

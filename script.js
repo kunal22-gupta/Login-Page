@@ -9,6 +9,7 @@ registerLink.addEventListener('click', () => {
 })
 
 loginLink.addEventListener('click', () => {
+    document.getElementsByTagName('form')[0].reset();
     wrapper.classList.remove('active');
 })
 
@@ -17,5 +18,6 @@ popup.addEventListener('click', () => {
 })
 
 close.addEventListener('click', () => {
+    document.getElementsByTagName('form')[0].reset();
     wrapper.classList.remove('active-popup');
 })

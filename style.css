@@ -109,7 +109,12 @@ header{
     backdrop-filter: blur(15px);
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.5);
     overflow: hidden;
-    transition: height 0.3s ease;
+    transform: scale(0);
+    transition: transform 0.2s ease-out, height 0.3s ease;
+}
+
+.wrapper.active-popup {
+    transform: scale(1);
 }
 
 .wrapper.active {

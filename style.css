@@ -183,7 +183,7 @@ header{
     border: none;
 }
 
-.remember-forget {
+.remember-forget, .terms-condition {
     color: var(--blue);
     font-size: 0.9em;
     font-weight: 500;
@@ -192,7 +192,7 @@ header{
     margin: -15px 0 15px;
 }
 
-.remember-forget label input {
+.remember-forget label input, .terms-condition {
     accent-color: var(--blue);
     margin-right: 5px;
 }

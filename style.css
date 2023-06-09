@@ -98,8 +98,8 @@ header{
 
 .wrapper {
     position: relative;
-    width: 450px;
-    height: 500px;
+    width: 400px;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,6 +109,30 @@ header{
     backdrop-filter: blur(15px);
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.5);
     overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.wrapper.active {
+    height: 500px;
+}
+
+.wrapper .form-box.login {
+    transition: transform .2s ease;
+    transform: translateX(0px);
+}
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+.wrapper.active .form-box.register {
+    transition: transform .2s ease;
+    transform: translateX(0);
 }
 
 .close-btn {
@@ -126,6 +150,7 @@ header{
     border-bottom-left-radius: 20px;
     cursor: pointer;
 }
+
 
 .wrapper .form-box {
     width: 100%;

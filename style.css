@@ -110,7 +110,7 @@ header{
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.5);
     overflow: hidden;
     transform: scale(0);
-    transition: transform 0.2s ease-out, height 0.3s ease;
+    transition: transform 0.2s ease, height 0.3s ease;
 }
 
 .wrapper.active-popup {
@@ -154,8 +154,8 @@ header{
     align-items: center;
     border-bottom-left-radius: 20px;
     cursor: pointer;
+    z-index: 1;
 }
-
 
 .wrapper .form-box {
     width: 100%;

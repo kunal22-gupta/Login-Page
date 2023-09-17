@@ -163,8 +163,8 @@ nav a:hover::after {
 }
 
 /* Login Form box */
-
 .wrapper {
+    margin: 20vh auto;
     position: relative;
     width: 400px;
     height: 450px;

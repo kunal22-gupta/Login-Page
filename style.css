@@ -164,10 +164,10 @@ nav a:hover::after {
 
 /* Login Form box */
 .wrapper {
-    margin: 20vh auto;
+    margin: 10vh auto;
     position: relative;
-    width: 400px;
-    height: 450px;
+    width: 20em;
+    height: 26em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,7 +186,7 @@ nav a:hover::after {
 }
 
 .wrapper.active {
-    height: 500px;
+    height: 30em;
 }
 
 .wrapper .form-box.login {
@@ -212,8 +212,8 @@ nav a:hover::after {
     position: absolute;
     top: 0;
     right: 0;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: var(--blue);
     color: #fff;
     font-size: 2em;
@@ -227,7 +227,7 @@ nav a:hover::after {
 
 .wrapper .form-box {
     width: 100%;
-    padding: 50px;
+    padding: 2em;
 }
 
 .form-box h2 {
@@ -275,7 +275,7 @@ nav a:hover::after {
     font-size: 1em;
     color: var(--blue);
     font-weight: 500;
-    padding: 0 30px 0 5px;
+    padding: 0 2em 0 0.4em;
     background: transparent;
     outline: none;
     border: none;
@@ -287,7 +287,7 @@ nav a:hover::after {
     font-weight: 500;
     display: flex;
     justify-content: space-between;
-    margin: -15px 0 15px;
+    margin: -1em 0 1em;
 }
 
 .remember-forget label input, .terms-condition {
@@ -321,7 +321,7 @@ nav a:hover::after {
     font-size: 0.9em;
     font-weight: 500;
     text-align: center;
-    margin: 15px 0 5px;
+    margin: 1em 0 0.4em;
 }
 
 .login-register a {

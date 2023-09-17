@@ -6,6 +6,8 @@
 
 :root {
     --blue: #05152e;
+    --light-blue: #236687;
+    --light-trans-blue: #45a3c063;
 }
 
 * {
@@ -17,35 +19,57 @@
 
 body{
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100vw;
     background: url("images/bg-image.jpg");
     background-size: cover;
     background-position: center;
 }
 
-/* Navbar */
+/* Reusable Selectors */
 
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 40px 200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+.mobile-hide {
+    display: none;
+}
+.desktop-hide {
+    display: block;
 }
 
-.logo {
+/* Header */
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 1em 0;
+}
+.menu-toggle {
+    width: 30px;
+    height: 30px;
+    font-size: 1.1em;
+    padding-right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+    color: white;
+    border-right: 2px solid var(--light-blue);
+}
+.logo{
     color: #fff;
     user-select: none;
     font-size: 2em;
 }
 
-.navigation a{
+/* Navigation menu */
+
+nav {
+    margin-left: auto;
+}
+nav a{
     position: relative;
     color: #fff;
     text-decoration: none;
@@ -53,8 +77,7 @@ header{
     font-weight: 400;
     margin-left: 50px;
 }
-
-.navigation a::after {
+nav a::after {
     content: '';
     position: absolute;
     left: 0px;
@@ -67,31 +90,76 @@ header{
     transform: scaleX(0);
     transition: transform 0.5s;
 }
-
-.navigation a:hover::after {
+nav a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
 }
 
-.navigation .btn-login {
-    width: 130px;
-    height: 50px;
-    background-color: var(--blue);
+/* Login button */
+.btn-login {
+    width: 7em;
+    height: 2.5em;
+    margin-left: auto;
+    background-color: var(--light-trans-blue);
     color: #fff;
     font-weight: 500;
     font-size: 1.1em;
     border-radius: 5px;
-    border: 2px solid white;
+    border: 2px solid var(--light-trans-blue);
     outline: none;
-    margin-left: 50px;
     transition: 0.5s;
 }
+.btn-login:hover {
+    border: 2px solid var(--light-blue);
+    background-color: var(--light-blue);
+    color: white;
+}
 
-.navigation .btn-login:hover {
-    border: 2px solid var(--blue);
-    background-color: #fff;
-    color: var(--blue);
-   
+/* Off-canvas menu */
+.off-canvas {
+    position: absolute;
+    height: 100vh;
+    max-width: fit-content;
+    backdrop-filter: blur(5px);
+    outline: none;
+    border-right: 1px solid var(--light-trans-blue);
+    transform: translateX(-100%);
+    visibility: hidden;
+    will-change: visibility;
+    transition: all .2s ease-in;
+}
+.off-canvas.active {
+    transform: translateX(0);
+    visibility: visible;
+}
+.off-canvas .canvas-head {
+    position: relative;
+    text-align: center;
+    padding: 1em 0em;
+    background-color: var(--light-blue);
+    width: 100%;
+}
+.off-canvas .canvas-head .t-close {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--light-trans-blue);
+    border-bottom-left-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9;
+}
+.off-canvas nav {
+    padding: 2em 4em;
+    display: flex;
+    flex-direction: column;
+}
+.off-canvas nav a {
+    margin: 1em 0;
 }
 
 /* Login Form box */
